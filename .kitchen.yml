@@ -1,0 +1,18 @@
+driver:
+  name: terraform
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: s3
+
+verifier:
+  name: shell
+
+suites:
+  - name: default
+    verifier:
+      shell_tests:
+        - test/integration/default
+    attributes:
